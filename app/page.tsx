@@ -3,10 +3,10 @@ import Link from "next/link";
 import Reveal from "./components/Reveal";
 
 const integrantes = [
-  { nombre: "Eliecer Celedrón", rol: "Voz & Guitarras", img: "/resources/integrante_1.png" },
-  { nombre: "Gerk", rol: "Percusion y ambientales", img: "/resources/integrante_2.png" },
-  { nombre: "Javier", rol: "Guitarras", img: "/resources/integrante_3.png" },
-  { nombre: "Eduardo", rol: "Voz & Bajos", img: "/resources/integrante_4.png" },
+  { nombre: "Eliecer Celedrón", rol: "Voz & Guitarras", img: "/resources/integrante_01.png" },
+  { nombre: "Gerko", rol: "Percusion y ambientales", img: "/resources/integrante_05.png" },
+  { nombre: "Javier", rol: "Guitarras", img: "/resources/integrante_03.png" },
+  { nombre: "Eduardo", rol: "Voz & Bajos", img: "/resources/integrante_06.png" },
 ];
 
 const tracks = [
@@ -22,7 +22,7 @@ export default function Home() {
       {/* ============ HERO ============ */}
       <section className="relative h-screen min-h-160 w-full">
         <Image
-          src="/resources/header_01.png"
+          src="/resources/header_02.jpeg"
           alt="Quatrotempo en vivo"
           fill
           priority

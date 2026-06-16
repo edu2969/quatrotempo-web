@@ -51,7 +51,7 @@ export default function Contacto() {
         const errorData = await response.json();
         setSubmitError(errorData.error || 'Error al enviar el mensaje');
       }
-    } catch (error) {
+    } catch {
       setSubmitError('Error de conexión. Por favor, intenta nuevamente.');
     } finally {
       setIsSubmitting(false);

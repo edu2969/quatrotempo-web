@@ -12,7 +12,7 @@ const integrantes = [
     id: 2,
     nombre: "Gerko",
     instrumento: "Percusiones",
-    imagen: "/resources/integrante_2.png",
+    imagen: "/resources/integrante_05.png",
     descripcion: "Se marca el ritmo de la marcha, coreada el alba junto al campo e intrumentos en madera y hierros de la tierra."
   },
   {
