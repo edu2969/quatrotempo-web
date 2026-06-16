@@ -5,7 +5,7 @@ import BandMembers from "./components/BandMembers";
 
 const integrantes = [
   { 
-    nombre: "Eliecer Celedrón",
+    nombre: "Eli Celedrón",
     bio: "Director, voz principal y guitarras. De sus ideas nacen las temáticas, los arreglos, la banda. El retoño alimentado con la savia del amor por la música.", 
     rol: "Voz & Guitarras", 
     img: "/resources/integrante_01.png",
@@ -60,8 +60,7 @@ export default function Home() {
           </h1>
 
           <p className="animate-fade-in mt-6 max-w-2xl text-base text-stone-300 sm:text-lg md:text-xl">
-            Donde la raíz vibra con energía en el ahora. Cuatro músicos, un viaje
-            sonoro por la América que late en cada acorde.
+            Cuatro músicos, un viaje sonoro por la acústica al rededor del mundo.
           </p>
 
           {/* Equalizer */}
@@ -111,9 +110,8 @@ export default function Home() {
               Cuatro tiempos, una misma raíz
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-stone-400">
-              Quatrotempo nace del cruce entre la tradición folclórica latinoamericana
-              y la fuerza del rock. Rescatamos historias, paisajes y memorias para
-              transformarlas en canciones que viajan por el tiempo.
+              QuatroTempo emerge en la necesidad de compartir grandes éxitos folckóricos,
+              con un toque acústico y creativo, para generar experiencia poética.
             </p>
           </Reveal>
 

@@ -3,7 +3,7 @@ import Image from "next/image";
 const integrantes = [
   {
     id: 1,
-    nombre: "Eliecer Celedrón",
+    nombre: "Eli Celedrón",
     instrumento: "Voz y Guitarras",
     imagen: "/resources/integrante_1.png",
     descripcion: "Desde ya hace sus años, los jinetes se encontraron, esos que calbangan la vida al ritmo de andar despacio, llenos de anhelos, recuerdos y ansias."
