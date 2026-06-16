@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Oswald } from "next/font/google";
 import "./globals.css";
 import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,9 +14,16 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const oswald = Oswald({
+  variable: "--font-display",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
 export const metadata: Metadata = {
-  title: "Quatrotempo - Banda Musical",
-  description: "Página oficial de la banda Quatrotempo",
+  title: "Quatrotempo — El ritmo que une tiempos",
+  description:
+    "Quatrotempo, el alma del folk rock. Donde la raíz vibra con energía en el ahora. Música, integrantes y shows en vivo.",
 };
 
 export default function RootLayout({
@@ -26,18 +34,11 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-900 text-white`}
-        style={{
-          backgroundImage: "url('/resources/background_page.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundAttachment: "fixed"
-        }}
+        className={`${geistSans.variable} ${geistMono.variable} ${oswald.variable} antialiased bg-stone-950 text-stone-100`}
       >
         <Navigation />
-        <main className="pt-16">
-          {children}
-        </main>
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

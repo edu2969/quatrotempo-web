@@ -3,31 +3,31 @@ import Image from "next/image";
 const integrantes = [
   {
     id: 1,
-    nombre: "Alex Rodríguez",
-    instrumento: "Guitarra Principal",
-    imagen: "/resources/integrante1.png",
-    descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    nombre: "Eliecer Celedrón",
+    instrumento: "Voz y Guitarras",
+    imagen: "/resources/integrante_1.png",
+    descripcion: "Desde ya hace sus años, los jinetes se encontraron, esos que calbangan la vida al ritmo de andar despacio, llenos de anhelos, recuerdos y ansias."
   },
   {
     id: 2,
-    nombre: "María González",
-    instrumento: "Batería",
-    imagen: "/resources/integrante2.png",
-    descripcion: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit."
+    nombre: "Gerko",
+    instrumento: "Percusiones",
+    imagen: "/resources/integrante_2.png",
+    descripcion: "Se marca el ritmo de la marcha, coreada el alba junto al campo e intrumentos en madera y hierros de la tierra."
   },
   {
     id: 3,
-    nombre: "Carlos Mendoza",
-    instrumento: "Bajo",
-    imagen: "/resources/integrante3.png",
-    descripcion: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga."
+    nombre: "Javier",
+    instrumento: "Guitarra",
+    imagen: "/resources/integrante_3.png",
+    descripcion: "Todo es melodías entonces, que se alínean como hilos de sonidos tejiendo el ambiente acogedor, relajante, reflexivo. Los muebles cantan."
   },
   {
     id: 4,
-    nombre: "Ana Silva",
-    instrumento: "Voz Principal",
-    imagen: "/resources/integrante4.png",
-    descripcion: "Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis."
+    nombre: "Eduardo",
+    instrumento: "Voz y bajos",
+    imagen: "/resources/integrante_4.png",
+    descripcion: "Para eso estamos, para jugar a la música. Vibramos, bailamos, creamos, porque nos mueve. Somos Quatro Tempo."
   }
 ];
 
@@ -41,8 +41,7 @@ export default function Somos() {
             SOMOS QUATROTEMPO
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Conoce a los artistas que dan vida a nuestra música y hacen posible 
-            cada una de nuestras presentaciones.
+            Les presento a los artistas que dan forma a ésta experiencia.
           </p>
         </div>
 

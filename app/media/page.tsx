@@ -9,7 +9,7 @@ import { HeartIcon as HeartIconSolid } from '@heroicons/react/24/solid';
 const instagramPosts = [
   {
     id: 1,
-    image: '/resources/integrante1.png',
+    image: '/resources/integrante_1.png',
     caption: '🎸 Ensayando nuestro nuevo single! ¿Qué les parece? #quatrotempo #musica #rock',
     likes: 234,
     comments: 15,
@@ -17,7 +17,7 @@ const instagramPosts = [
   },
   {
     id: 2,
-    image: '/resources/integrante2.png',
+    image: '/resources/integrante_2.png',
     caption: '🥁 La energía en los ensayos es increíble! #bateria #musica #energia',
     likes: 189,
     comments: 8,
@@ -25,7 +25,7 @@ const instagramPosts = [
   },
   {
     id: 3,
-    image: '/resources/integrante3.png',
+    image: '/resources/integrante_3.png',
     caption: '🎵 Trabajando en nuevas melodías para ustedes #bajo #composicion #studio',
     likes: 156,
     comments: 12,
@@ -33,7 +33,7 @@ const instagramPosts = [
   },
   {
     id: 4,
-    image: '/resources/integrante4.png',
+    image: '/resources/integrante_4.png',
     caption: '🎤 Grabando vocals para nuestro próximo álbum! #voz #recording #album',
     likes: 278,
     comments: 22,
@@ -49,7 +49,7 @@ const instagramPosts = [
   },
   {
     id: 6,
-    image: '/resources/integrante1.png',
+    image: '/resources/integrante_1.png',
     caption: '🎸 Nueva guitarra, nuevos sonidos! #gear #guitarra #music',
     likes: 167,
     comments: 9,
@@ -57,7 +57,7 @@ const instagramPosts = [
   },
   {
     id: 7,
-    image: '/resources/integrante2.png',
+    image: '/resources/integrante_2.png',
     caption: '💫 Momentos antes de subir al escenario #backstage #concert #nervios',
     likes: 198,
     comments: 14,
@@ -65,7 +65,7 @@ const instagramPosts = [
   },
   {
     id: 8,
-    image: '/resources/integrante3.png',
+    image: '/resources/integrante_3.png',
     caption: '🎼 Componiendo nuevas líneas de bajo #composicion #bass #creative',
     likes: 134,
     comments: 7,
@@ -73,7 +73,7 @@ const instagramPosts = [
   },
   {
     id: 9,
-    image: '/resources/integrante4.png',
+    image: '/resources/integrante_4.png',
     caption: '✨ Letras que llegan al alma #lyrics #writing #inspiration',
     likes: 223,
     comments: 16,
