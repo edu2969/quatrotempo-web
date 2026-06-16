@@ -1,19 +1,35 @@
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "./components/Reveal";
+import BandMembers from "./components/BandMembers";
 
 const integrantes = [
-  { nombre: "Eliecer Celedrón", rol: "Voz & Guitarras", img: "/resources/integrante_01.png" },
-  { nombre: "Gerko", rol: "Percusion y ambientales", img: "/resources/integrante_05.png" },
-  { nombre: "Javier", rol: "Guitarras", img: "/resources/integrante_03.png" },
-  { nombre: "Eduardo", rol: "Voz & Bajos", img: "/resources/integrante_06.png" },
+  { 
+    nombre: "Eliecer Celedrón",
+    bio: "Director, voz principal y guitarras. De sus ideas nacen las temáticas, los arreglos, la banda. El retoño alimentado con la savia del amor por la música.", 
+    rol: "Voz & Guitarras", 
+    img: "/resources/integrante_01.png",
+    instrumentos: ["guitarra.png"]
+  },
+  { nombre: "Gerko", rol: "Percusion y ambientales", img: "/resources/integrante_05.png",
+    bio: "La experiencia se complementa con sonidos ambientales, percusiones, ritmo y sabor. El recuadro está ahora completo.",
+    instrumentos: ["cascada.png", "cricket.png", "bongos.png", "congas.png", "cajon.png"]
+   },
+  { nombre: "Javier", rol: "Guitarras", img: "/resources/integrante_03.png",
+    bio: "Con precisión y agilidad, las guitarras cantan las melodías principales y son la guinda de la experiencia musical de la banda.",
+    instrumentos: ["guitarra_2.png", "tiple.png"]
+   },
+  { nombre: "Eduardo", rol: "Voz & Bajos", img: "/resources/integrante_06.png",
+    bio: "Para complementar, los bajos y los juegos de voces dan un brillo extra, con danzas y energía, el espectáculo cierra.",
+    instrumentos: ["ubass.png", "bajo.png"]
+   },
 ];
 
 const tracks = [
-  { titulo: "Raíz y Trueno", duracion: "4:12" },
-  { titulo: "Camino al Sur", duracion: "3:48" },
-  { titulo: "Cordillera", duracion: "5:03" },
-  { titulo: "El Ritmo que Une", duracion: "4:27" },
+  { titulo: "La maza", duracion: "4:12" },
+  { titulo: "Medianoche", duracion: "3:48" },
+  { titulo: "Cactus", duracion: "5:03" },
+  { titulo: "Pequeña serenata diurna", duracion: "4:27" },
 ];
 
 export default function Home() {
@@ -101,27 +117,10 @@ export default function Home() {
             </p>
           </Reveal>
 
-          {/* Integrantes */}
-          <div className="mt-16 grid grid-cols-2 gap-8 sm:grid-cols-4">
-            {integrantes.map((m, i) => (
-              <Reveal key={m.nombre} delay={i * 120} className="group flex flex-col items-center text-center">
-                <div className="pulse-ring relative h-32 w-32 sm:h-40 sm:w-40">
-                  <div className="relative h-full w-full overflow-hidden rounded-full ring-2 ring-amber-500/30 transition-all duration-500 group-hover:ring-amber-400">
-                    <Image
-                      src={m.img}
-                      alt={m.nombre}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                  </div>
-                </div>
-                <h3 className="mt-5 font-display text-lg font-semibold text-white">
-                  {m.nombre}
-                </h3>
-                <p className="text-sm text-amber-400">{m.rol}</p>
-              </Reveal>
-            ))}
-          </div>
+          {/* Integrantes (interactivo) */}
+          <Reveal className="mt-16">
+            <BandMembers integrantes={integrantes} />
+          </Reveal>
 
           <Reveal className="mt-14 text-center" delay={200}>
             <Link
