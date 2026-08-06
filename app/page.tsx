@@ -8,18 +8,18 @@ const integrantes = [
     nombre: "Eli Celedrón",
     bio: "Director, voz principal y guitarras. De sus ideas nacen las temáticas, los arreglos, la banda. El retoño alimentado con la savia del amor por la música.", 
     rol: "Voz & Guitarras", 
-    img: "/resources/integrante_01.png",
+    img: "/resources/eli_002.png",
     instrumentos: ["guitarra.png"]
   },
-  { nombre: "Gerko", rol: "Percusion y ambientales", img: "/resources/integrante_05.png",
+  { nombre: "Gerko", rol: "Percusion y ambientales", img: "/resources/gerko_002.png",
     bio: "La experiencia se complementa con sonidos ambientales, percusiones, ritmo y sabor. El recuadro está ahora completo.",
     instrumentos: ["cascada.png", "cricket.png", "bongos.png", "congas.png", "cajon.png"]
    },
-  { nombre: "Javier", rol: "Guitarras", img: "/resources/integrante_03.png",
+  { nombre: "Javier", rol: "Guitarras", img: "/resources/javier_002.png",
     bio: "Con precisión y agilidad, las guitarras cantan las melodías principales y son la guinda de la experiencia musical de la banda.",
     instrumentos: ["guitarra_2.png", "tiple.png"]
    },
-  { nombre: "Eduardo", rol: "Voz & Bajos", img: "/resources/integrante_06.png",
+  { nombre: "Eduardo", rol: "Voz & Bajos", img: "/resources/edu_002.png",
     bio: "Para complementar, los bajos y los juegos de voces dan un brillo extra, con danzas y energía, el espectáculo cierra.",
     instrumentos: ["ubass.png", "bajo.png"]
    },
@@ -50,17 +50,17 @@ export default function Home() {
 
         <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center">
           <p className="animate-fade-in mb-4 text-xs uppercase tracking-[0.45em] text-amber-400 sm:text-sm">
-            El alma del Folk Rock
+            Un viaje acústico, latino, para el mundo.
           </p>
 
           <h1 className="animate-fade-in font-display text-4xl font-bold leading-[0.95] text-white drop-shadow-2xl sm:text-6xl md:text-7xl lg:text-8xl">
             EL RITMO QUE
             <br />
-            UNE <span className="text-shimmer">TIEMPOS</span>
+            UNE <span className="text-shimmer">PASAJEROS</span>
           </h1>
 
           <p className="animate-fade-in mt-6 max-w-2xl text-base text-stone-300 sm:text-lg md:text-xl">
-            Cuatro músicos, un viaje sonoro por la acústica al rededor del mundo.
+            Cuatro músicos, por una travesía de rincones y paisajes.
           </p>
 
           {/* Equalizer */}
@@ -110,8 +110,8 @@ export default function Home() {
               Cuatro tiempos, una misma raíz
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-stone-400">
-              QuatroTempo emerge en la necesidad de compartir grandes éxitos folckóricos,
-              con un toque acústico y creativo, para generar experiencia poética.
+              QuatroTempo son cuatro integrantes espacidos en las décadas, que combinan en sus emociones musicales,
+              la eterna búsqueda entre las armonías y compaces.
             </p>
           </Reveal>
 

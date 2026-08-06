@@ -3,37 +3,40 @@ import Image from "next/image";
 const integrantes = [
   {
     id: 1,
-    nombre: "Eli Celedrón",
-    instrumento: "Voz y Guitarras",
-    imagen: "/resources/integrante_1.png",
-    descripcion: "Desde ya hace sus años, los jinetes se encontraron, esos que calbangan la vida al ritmo de andar despacio, llenos de anhelos, recuerdos y ansias."
+    nombre: "Javier",
+    instrumento: "Guitarra",
+    imagen: "/resources/javier_001.jpeg",
+    descripcion: "Todo es melodías entonces, que se alínean como hilos de sonidos tejiendo el ambiente acogedor, relajante, reflexivo. Los muebles cantan."    
   },
   {
     id: 2,
     nombre: "Gerko",
     instrumento: "Percusiones",
-    imagen: "/resources/integrante_05.png",
+    imagen: "/resources/gerko_001.jpeg",
     descripcion: "Se marca el ritmo de la marcha, coreada el alba junto al campo e intrumentos en madera y hierros de la tierra."
   },
   {
     id: 3,
-    nombre: "Javier",
-    instrumento: "Guitarra",
-    imagen: "/resources/integrante_3.png",
-    descripcion: "Todo es melodías entonces, que se alínean como hilos de sonidos tejiendo el ambiente acogedor, relajante, reflexivo. Los muebles cantan."
+    nombre: "Eli",
+    instrumento: "Voz y Guitarras",
+    imagen: "/resources/eli_001.jpeg",
+    descripcion: "Desde ya hace sus años, los jinetes se encontraron, esos que calbangan la vida al ritmo de andar despacio, llenos de anhelos, recuerdos y ansias."
   },
   {
     id: 4,
     nombre: "Eduardo",
     instrumento: "Voz y bajos",
-    imagen: "/resources/integrante_4.png",
+    imagen: "/resources/eduardo_001.jpeg",
     descripcion: "Para eso estamos, para jugar a la música. Vibramos, bailamos, creamos, porque nos mueve. Somos Quatro Tempo."
   }
 ];
 
 export default function Somos() {
   return (
-    <div className="min-h-screen py-16">
+    <div
+      className="min-h-screen py-16 bg-cover bg-center bg-fixed bg-no-repeat"
+      style={{ backgroundImage: "url('/resources/bg-2.jpg')" }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
@@ -50,21 +53,21 @@ export default function Somos() {
           {integrantes.map((integrante, index) => (
             <div
               key={integrante.id}
-              className={`flex flex-col lg:flex-row items-center gap-8 lg:gap-12 ${
-                index % 2 === 1 ? 'lg:flex-row-reverse' : ''
-              }`}
+              className={`flex flex-col lg:flex-row items-center gap-8 lg:gap-12 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''
+                }`}
             >
               {/* Imagen */}
               <div className="lg:w-1/2">
-                <div className="relative w-full max-w-md mx-auto aspect-square rounded-2xl overflow-hidden shadow-2xl">
+                <div className="relative w-full mx-auto aspect-4/3 rounded-2xl overflow-hidden shadow-2xl">
                   <Image
                     src={integrante.imagen}
                     alt={integrante.nombre}
                     fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover transition-transform duration-300 hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                  <div className="absolute bottom-4 left-4 right-4">
+                  <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/10 to-transparent"></div>
+                  <div className="absolute bottom-0 left-0 right-0 p-5">
                     <h3 className="text-2xl font-bold text-white mb-1">
                       {integrante.nombre}
                     </h3>
