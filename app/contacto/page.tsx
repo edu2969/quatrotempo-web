@@ -97,7 +97,7 @@ export default function Contacto() {
                   </div>
                   <div>
                     <p className="text-white font-semibold">Teléfono</p>
-                    <p className="text-gray-300">+56 9 1234 5678</p>
+                    <p className="text-gray-300">+56 9 5686 1160</p>
                   </div>
                 </div>
 
@@ -209,7 +209,7 @@ export default function Contacto() {
                   {...register('telefono')}
                   type="tel"
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 transition-colors"
-                  placeholder="+56 9 1234 5678"
+                  placeholder="+56 9 5686 1160"
                 />
               </div>
 
