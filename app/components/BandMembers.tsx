@@ -135,11 +135,14 @@ export default function BandMembers({ integrantes }: { integrantes: Integrante[]
   const activeMember = hasActive ? integrantes[activeIndex as number] : null;
 
   return (
-    <div className="flex h-72 items-center justify-center sm:h-80">
+    // En mobile: columna (íconos arriba, panel abajo). Desde sm: fila, todo en línea.
+    // La altura fija (h-72/h-80) solo aplica desde sm — en mobile el contenido se
+    // apila y necesita alto variable, así que se deja auto con padding en su lugar.
+    <div className="flex flex-col items-center gap-8 py-4 sm:h-80 sm:flex-row sm:justify-center sm:gap-0 sm:py-0">
       <motion.div
         layout
         transition={{ duration: 0.6, ease: moveEase }}
-        className={`flex items-center ${hasActive ? 'justify-start gap-8' : 'justify-center gap-x-6 sm:gap-x-8'}`}
+        className={`flex items-center justify-center ${hasActive ? 'gap-6 sm:justify-start sm:gap-8' : 'gap-x-6 sm:gap-x-8'}`}
       >
         {/* ---------- Columna de inactivos, apilados en vertical y pequeños ---------- */}
         {hasActive && (
@@ -159,7 +162,7 @@ export default function BandMembers({ integrantes }: { integrantes: Integrante[]
             <MemberCircle key={m.nombre} m={m} variant="row" burstKey={burstKey} onClick={() => toggle(i)} />
           ))}
 
-        {/* ---------- Activo: grande, a la derecha de la columna ---------- */}
+        {/* ---------- Activo: grande, junto a la columna ---------- */}
         {hasActive && activeMember && (
           <MemberCircle
             key={activeMember.nombre}
@@ -169,47 +172,49 @@ export default function BandMembers({ integrantes }: { integrantes: Integrante[]
             onClick={() => toggle(activeIndex as number)}
           />
         )}
-
-        {/* ---------- Panel: bio + instrumentos, fade in/out ---------- */}
-        <AnimatePresence mode="wait">
-          {hasActive && activeMember && (
-            <motion.div
-              key={`panel-${activeMember.nombre}`}
-              layout
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.4, ease: moveEase }}
-              className="grid h-56 flex-1 grid-cols-[2fr_3fr] gap-6"
-            >
-              {/* Bio: proporción 2/5 del ancho del panel, centrada horizontal y verticalmente */}
-              <div className="no-scrollbar flex h-full items-center justify-center overflow-y-auto px-2 text-center">
-                <p className="text-sm leading-relaxed text-stone-300">{activeMember.bio}</p>
-              </div>
-
-              {/* Instrumentos: proporción 3/5, wrap de 3 columnas, centrados */}
-              <div className="no-scrollbar grid h-full grid-cols-3 place-items-center gap-x-4 gap-y-3 overflow-y-auto">
-                {activeMember.instrumentos.map((inst) => (
-                  <div key={inst} className="flex w-16 flex-col items-center gap-1.5">
-                    <div className="relative h-14 w-14">
-                      <Image
-                        src={`/resources/instrumentos/${inst}`}
-                        alt={instrumentoLabels[inst] ?? inst}
-                        fill
-                        sizes="3.5rem"
-                        className="object-contain"
-                      />
-                    </div>
-                    <span className="text-center text-xs leading-tight text-stone-400">
-                      {instrumentoLabels[inst] ?? inst}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
       </motion.div>
+
+      {/* ---------- Panel: bio + instrumentos, fade in/out ----------
+          Mobile: ancho completo, apilado (bio arriba, instrumentos abajo).
+          Desde sm: al costado del grupo de íconos, bio e instrumentos lado a lado. */}
+      <AnimatePresence mode="wait">
+        {hasActive && activeMember && (
+          <motion.div
+            key={`panel-${activeMember.nombre}`}
+            layout
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.4, ease: moveEase }}
+            className="grid w-full grid-cols-1 gap-6 sm:h-56 sm:w-auto sm:flex-1 sm:grid-cols-[2fr_3fr]"
+          >
+            {/* Bio: en mobile ocupa todo el ancho arriba; desde sm, 2/5 del panel */}
+            <div className="no-scrollbar flex max-h-40 items-center justify-center overflow-y-auto px-2 text-center sm:h-full sm:max-h-none">
+              <p className="text-sm leading-relaxed text-stone-300">{activeMember.bio}</p>
+            </div>
+
+            {/* Instrumentos: en mobile ocupa todo el ancho abajo; desde sm, 3/5 del panel */}
+            <div className="no-scrollbar grid max-h-52 grid-cols-3 place-items-center gap-x-4 gap-y-3 overflow-y-auto sm:h-full sm:max-h-none">
+              {activeMember.instrumentos.map((inst) => (
+                <div key={inst} className="flex w-16 flex-col items-center gap-1.5">
+                  <div className="relative h-14 w-14">
+                    <Image
+                      src={`/resources/instrumentos/${inst}`}
+                      alt={instrumentoLabels[inst] ?? inst}
+                      fill
+                      sizes="3.5rem"
+                      className="object-contain"
+                    />
+                  </div>
+                  <span className="text-center text-xs leading-tight text-stone-400">
+                    {instrumentoLabels[inst] ?? inst}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

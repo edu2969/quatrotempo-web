@@ -19,10 +19,10 @@ const experiencias = [
     titulo: "Muchileo a la postre",
     descripcion: "Después de años, se desempolva el cuero. Un peine al cabello, nuestros adornos y a volver a soñar.",
     tracks: [
-      { titulo: "Muchileo", duracion: "3:56" },
+      { titulo: "Power momentos", duracion: "3:56" },
       { titulo: "Serpientes", duracion: "4:21" },
       { titulo: "La maza", duracion: "5:15" },
-      { titulo: "Raíces", duracion: "4:45" },
+      { titulo: "En claro de la luna", duracion: "4:45" },
     ]
   }
 ];
@@ -89,9 +89,9 @@ export const TrackList = () => {
                 <div className="absolute inset-0 flex items-center justify-center">
                   <button
                     type="button"
-                    onClick={() => playTrack(i, 0)}
-                    aria-label={playingId === `${i}-0` ? 'Pausar' : 'Reproducir'}
-                    aria-pressed={playingId === `${i}-0`}
+                    onClick={() => playTrack(i + 1, 1)}
+                    aria-label={playingId === `${i}-1` ? 'Pausar' : 'Reproducir'}
+                    aria-pressed={playingId === `${i}-1`}
                     className="pulse-ring relative flex h-16 w-16 items-center justify-center rounded-full bg-amber-400 text-stone-950 shadow-xl transition-transform hover:scale-110 sm:h-20 sm:w-20"
                   >
                     {playingId === `${i}-0` ? (
