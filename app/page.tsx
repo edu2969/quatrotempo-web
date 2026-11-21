@@ -3,6 +3,7 @@ import { LiveExperience } from "./components/LiveExperience";
 import { Connect } from "./components/Connect";
 import Escence from "./components/Escence";
 import Hero from "./components/Hero";
+import UpcomingShows from "./components/UpcomingShows";
 
 export default function Home() {
   return (
@@ -12,6 +13,8 @@ export default function Home() {
       <Escence />
 
       <TrackList />
+
+      <UpcomingShows />
 
       <LiveExperience />
 

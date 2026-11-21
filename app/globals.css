@@ -74,9 +74,29 @@ body {
   50% { height: 100%; }
 }
 
+@keyframes music-rain {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -12vh, 0) rotate(-14deg);
+  }
+  12% { opacity: 0.32; }
+  28% { transform: translate3d(18px, 26vh, 0) rotate(7deg); }
+  52% { transform: translate3d(-13px, 56vh, 0) rotate(18deg); }
+  76% { transform: translate3d(15px, 86vh, 0) rotate(5deg); }
+  100% {
+    opacity: 0;
+    transform: translate3d(-8px, 116vh, 0) rotate(-13deg);
+  }
+}
+
 /* ---------- Animation utilities ---------- */
 .animate-float-slow {
   animation: float-slow 6s ease-in-out infinite;
+}
+
+.music-rain-symbol {
+  animation: music-rain 24s linear infinite;
+  will-change: transform, opacity;
 }
 
 .animate-fade-in {
@@ -149,11 +169,16 @@ body {
   .text-shimmer,
   .scroll-dot,
   .pulse-ring::before,
-  .eq-bar {
+  .eq-bar,
+  .music-rain-symbol {
     animation: none !important;
     transition: none !important;
     opacity: 1 !important;
     transform: none !important;
+  }
+
+  .music-rain-symbol {
+    opacity: 0.12 !important;
   }
 }
 

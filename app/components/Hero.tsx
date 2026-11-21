@@ -1,3 +1,5 @@
+'use client';
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -17,7 +19,7 @@ export default function Hero() {
 
             <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center">
                 <p className="animate-fade-in mb-4 text-xs uppercase tracking-[0.45em] text-amber-400 sm:text-sm">
-                    Un viaje acústico, latino, para el mundo.
+                    Un viaje acústico, para el mundo.
                 </p>
 
                 <h1 className="animate-fade-in font-display text-4xl font-bold leading-[0.95] text-white drop-shadow-2xl sm:text-6xl md:text-7xl lg:text-8xl">
@@ -43,14 +45,15 @@ export default function Hero() {
 
                 <div className="animate-fade-in mt-8 flex flex-col gap-4 sm:flex-row">
                     <Link
-                        href="/media"
+                        href="#musica-1"
+                        onClick={() => window.dispatchEvent(new CustomEvent("quatrotempo:play-random"))}
                         className="group inline-flex items-center justify-center gap-2 rounded-full bg-amber-400 px-8 py-3.5 font-semibold text-stone-950 shadow-lg shadow-amber-500/30 transition-all hover:scale-105 hover:bg-amber-300"
                     >
                         <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
-                        Escuchar Ahora
+                        ESCUCHAR ALEATORIO
                     </Link>
                     <Link
-                        href="/contacto"
+                        href="#shows"
                         className="inline-flex items-center justify-center gap-2 rounded-full border border-stone-400/60 px-8 py-3.5 font-semibold text-white backdrop-blur-sm transition-all hover:border-amber-400 hover:bg-amber-400/10 hover:text-amber-300"
                     >
                         Próximos Shows
